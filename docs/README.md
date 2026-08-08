@@ -20,7 +20,13 @@
 ## Эксперименты
 
 - [experiments/README.md](experiments/README.md) — жизненный цикл и правила experiment documents.
-- [experiments/E0a-P-planner-pilot.md](experiments/E0a-P-planner-pilot.md) — calibration pilot LLM planning.
+- [experiments/E0a-P-planner-pilot.md](experiments/E0a-P-planner-pilot.md) — canonical calibration protocol LLM planning.
+- [experiments/E0a-P/README.md](experiments/E0a-P/README.md) — исполнимый E0a-P package и dry-run checklist.
+  - [task-selection.md](experiments/E0a-P/task-selection.md) — criteria и provisional six-task slate.
+  - [annotation-manual.md](experiments/E0a-P/annotation-manual.md) — gold creation и scoring rubric.
+  - [prompt-protocols.md](experiments/E0a-P/prompt-protocols.md) — exact P0/P1/P2 instructions.
+  - [runbook.md](experiments/E0a-P/runbook.md) — randomization, execution, review и analysis.
+  - [data-contract.md](experiments/E0a-P/data-contract.md) — canonical records и integrity checks.
 - [experiments/E0a-A-analyzability-pilot.md](experiments/E0a-A-analyzability-pilot.md) — calibration pilot real-role analyzability и opaque-cone.
 
 ## Research
@@ -42,5 +48,5 @@
 - `current-focus.md` должен отражать настоящее, а не историю.
 - `research-state.md` хранит устойчивые выводы, а не подробный transcript обсуждений.
 - ADR не переписывается после принятия, кроме исправления опечаток; новое решение оформляется новым ADR.
-- Experiment document должен явно иметь статус: `draft`, `pilot`, `preregistered`, `running`, `completed` или `superseded`.
+- Experiment document должен явно иметь статус: `draft`, `executable-protocol draft`, `pilot`, `preregistered`, `running`, `completed` или `superseded`.
 - После изменения состава документов обновляй это оглавление.
