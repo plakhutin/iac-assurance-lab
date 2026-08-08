@@ -1,0 +1,23 @@
+Write no more than 1,600 words. Use the following top-level structure for every answer:
+
+# Summary
+State the task, intended outcome, and the most important constraints in concise form.
+
+# Questions and assumptions
+Separate unresolved owner decisions from temporary explicit assumptions. Explain the
+planning consequence of material unknowns.
+
+# Plan
+Give an ordered implementation, rollout, and rollback plan at engineering-design level.
+Do not output complete Ansible code.
+
+# Verification
+Describe the evidence/checks needed before merge, during deployment, and after
+convergence. Distinguish static/source checks from runtime or external-system checks.
+
+# Residual risks and scope
+List important residual risks, unsupported claims, and any proposed scope exclusions.
+Name the decision owner for exclusions when the package makes that possible.
+
+Prefer precise, testable statements over generic advice. Avoid repeating the same point
+under multiple headings.

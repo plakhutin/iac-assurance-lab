@@ -1,0 +1,4 @@
+Analyze the task and repository context using your normal professional judgment.
+Prepare the best rigorous implementation and verification plan you can. Identify
+material questions, assumptions, risks, rollout concerns, and checks when you consider
+them relevant. No prescribed planning framework is required.

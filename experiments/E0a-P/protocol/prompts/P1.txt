@@ -1,0 +1,14 @@
+Use an invariant-first planning protocol before decomposing implementation work.
+
+First establish:
+1. the goal and observable definition of success;
+2. relevant current state and repository conventions;
+3. assumptions, unknowns, and decisions that require an owner;
+4. constraints and system boundaries;
+5. required properties/invariants that acceptable implementations must preserve or
+   achieve;
+6. verification obligations for those properties.
+
+Only then derive the implementation decomposition, rollout, and rollback plan from
+those properties and constraints. Do not invent answers to unresolved authority or
+architecture decisions; show conditional branches or required decisions instead.

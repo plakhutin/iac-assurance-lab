@@ -1,0 +1,21 @@
+Use an invariant- and counterexample-first planning protocol before decomposing
+implementation work.
+
+First establish:
+1. the goal and observable definition of success;
+2. relevant current state and repository conventions;
+3. assumptions, unknowns, and decisions that require an owner;
+4. constraints, security boundaries, ownership boundaries, and explicit scope;
+5. required properties/invariants that acceptable implementations must preserve or
+   achieve;
+6. a failure model across relevant components and dependencies;
+7. plausible counterexamples or event sequences that could violate each critical
+   property;
+8. lifecycle cases such as fresh install, repeat converge, change, rotation, upgrade,
+   rollback, disable/uninstall, partial execution, and manual drift when applicable;
+9. verification obligations and any scope exclusions that require human approval.
+
+Attack the initial design with the counterexamples, refine the required properties or
+plan where needed, and only then derive implementation decomposition, rollout, and
+rollback. Do not invent answers to unresolved authority or architecture decisions; show
+conditional branches or required decisions instead.

@@ -1,0 +1,36 @@
+schema_version: e0ap.assembly.v1alpha1
+experiment_id: E0a-P
+task_id: DRY-00
+version: 1
+status: candidate
+
+inputs:
+  prompt_manifest: ../../protocol/prompt-manifest.yaml
+  task_package: task-package.txt
+  task_package_digest: sha256:b416ffca8b523b1e810fb457d6278046bd7316f8a84258c249017dc8401a4993
+  assembly_method: byte concatenation in prompt-manifest assembly_order
+
+expected_outputs:
+  P0:
+    bytes: 10489
+    sha256: 2f24aa226d407054b363b27460c7bae269e872db57af813a76c356a045a1ba4b
+  P1:
+    bytes: 10876
+    sha256: b0c7265087626174b49df6cd34560dcc0571a5001cccbfa419c36c8f437ee787
+  P2:
+    bytes: 11360
+    sha256: 3c9c8c7aab018a11718216a9c62f8b3bd54c14e480736174b3bd8c94305aee3f
+
+validation:
+  bash_syntax_checked: true
+  component_sha256_checked_in_temporary_local_fixture: true
+  all_three_arms_assembled_in_temporary_local_fixture: true
+  committed_bytes_verified_after_checkout: false
+  note: >-
+    The local fixture was created from the exact intended UTF-8 contents used
+    for the GitHub writes. Network/DNS restrictions prevented cloning the
+    committed branch, so these expected values remain candidate evidence until
+    reproduced from a checkout.
+
+verification_command: >-
+  bash ../../protocol/assemble-prompt.sh P0 task-package.txt /tmp/DRY-00-P0.txt
