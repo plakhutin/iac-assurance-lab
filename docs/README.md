@@ -41,7 +41,8 @@
 
 ## История работы
 
-- [worklog/README.md](worklog/README.md) — формат кратких исторических записей, если их недостаточно держать в Git history и ADR.
+- [worklog/README.md](worklog/README.md) — формат кратких исторических записей.
+- [worklog/2026-08-08-e0ap-protocol-and-dry-run.md](worklog/2026-08-08-e0ap-protocol-and-dry-run.md) — materialization E0a-P protocol, prompt artifacts и `DRY-00`.
 
 ## Правила актуальности
 
