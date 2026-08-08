@@ -6,13 +6,24 @@
 
 | ID | Название | Стадия | Цель |
 |---|---|---|---|
-| `E0a-P` | Planner calibration pilot | draft | Оценить baseline, variance, annotation process и sample-size inputs |
+| `E0a-P` | Planner calibration pilot | executable-protocol draft | Оценить baseline, variance, annotation process и sample-size inputs |
 | `E0a-A` | Analyzability calibration pilot | draft | Оценить prevalence opaque constructs и feasibility obligation-relative slicing |
+
+### E0a-P protocol package
+
+- [`E0a-P-planner-pilot.md`](E0a-P-planner-pilot.md) — canonical high-level protocol и readiness status.
+- [`E0a-P/README.md`](E0a-P/README.md) — package index и dry-run entry checklist.
+- [`E0a-P/task-selection.md`](E0a-P/task-selection.md) — inclusion/exclusion criteria и provisional task slate.
+- [`E0a-P/annotation-manual.md`](E0a-P/annotation-manual.md) — independent gold creation и output scoring.
+- [`E0a-P/prompt-protocols.md`](E0a-P/prompt-protocols.md) — exact common prompt и treatment deltas.
+- [`E0a-P/runbook.md`](E0a-P/runbook.md) — execution, randomization, retries, blinding и analysis.
+- [`E0a-P/data-contract.md`](E0a-P/data-contract.md) — canonical task/gold/run/score records.
 
 ## Lifecycle
 
 ```text
 draft
+→ executable-protocol draft
 → pilot
 → preregistered
 → running
@@ -26,6 +37,8 @@ draft
 - preregistered experiment проверяет заранее зафиксированную hypothesis.
 
 Pilot outcomes нельзя подавать как confirmatory result.
+
+`executable-protocol draft` означает, что procedure уже описана достаточно точно для dry run, но task packages, participants, model и manifests ещё не frozen.
 
 ## Required sections
 
