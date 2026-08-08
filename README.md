@@ -11,14 +11,18 @@
 
 ## Текущий статус
 
-**Фаза:** bootstrap репозитория и подготовка calibration pilot.
+**Фаза:** `E0a-P` executable protocol → `DRY-00` preflight.
 
-Ближайшие направления:
+Уже подготовлены:
 
-- `E0a-P` — пилот plain planning против invariant-first и counterexample-first planning;
-- `E0a-A` — пилот structural analyzability и opaque-cone на legacy Ansible-ролях;
-- формирование corpus и схемы экспертной разметки;
-- уточнение related work и возможностей повторного использования существующих инструментов.
+- точные protocol arms `P0/P1/P2`;
+- task-selection и expert-annotation manual;
+- runbook, canonical data contract и reproducible prompt components;
+- controlled synthetic `DRY-00` task package с authority boundary и prompt-injection fixture.
+
+Текущий следующий шаг описан в [docs/current-focus.md](docs/current-focus.md): проверить digests после checkout, провести independent expert elicitation для `DRY-00`, freeze dry-run gold и только затем получить по одному P0/P1/P2 output.
+
+Параллельный трек `E0a-A` по structural analyzability остаётся запланированным, но сейчас не является active implementation focus.
 
 ## Начать здесь
 
@@ -27,6 +31,8 @@
 3. [docs/project/charter.md](docs/project/charter.md) — миссия, границы и нецели.
 4. [docs/project/research-state.md](docs/project/research-state.md) — консолидированная память проекта.
 5. [docs/README.md](docs/README.md) — оглавление документации.
+6. [docs/experiments/E0a-P/README.md](docs/experiments/E0a-P/README.md) — исполнимый protocol package.
+7. [experiments/E0a-P/README.md](experiments/E0a-P/README.md) — фактические protocol/task artifacts.
 
 ## Исследовательские треки
 
@@ -69,7 +75,11 @@
 │   ├── research/
 │   ├── templates/
 │   └── worklog/
+├── experiments/
+│   └── E0a-P/
+│       ├── protocol/
+│       └── tasks/DRY-00/
 └── .github/
 ```
 
-Код, corpus и profiler добавляются только после фиксации форматов пилотных экспериментов и явного решения о реализации.
+Research harness и corpus artifacts добавляются только для конкретного experiment need. Общий analyzer, profiler и production platform по-прежнему отложены до experimental gates.
