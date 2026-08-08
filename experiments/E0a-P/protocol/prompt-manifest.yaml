@@ -1,0 +1,59 @@
+schema_version: e0ap.prompt.v1alpha1
+experiment_id: E0a-P
+version: 1
+status: dry_run_candidate
+
+assembly_order:
+  - common_system
+  - arm_instruction
+  - common_output_contract
+  - task_package
+
+components:
+  common_system:
+    id: COMMON_SYSTEM_v1
+    artifact: prompts/common-system.txt
+    bytes: 1147
+    digest: sha256:7f5fe51d0f212740afee38040cfafc262931968acdacf089369e28bdc19bac21
+  output_contract:
+    id: COMMON_OUTPUT_CONTRACT_v1
+    artifact: prompts/common-output-contract.txt
+    bytes: 961
+    digest: sha256:4bfc6ff57d2567ebb31b088749dee800100a9ff7b87fb2de1d75f8b632ebc56b
+  arms:
+    P0:
+      id: ARM_INSTRUCTION_P0_v1
+      artifact: prompts/P0.txt
+      bytes: 310
+      digest: sha256:ed1f1e9e3ae519523e4dc5f6aa45e909876f64452be15c4e7a16de7776465b93
+    P1:
+      id: ARM_INSTRUCTION_P1_v1
+      artifact: prompts/P1.txt
+      bytes: 697
+      digest: sha256:be043d2eb3645e371d37d759bf1d29865ce2e302ba745a6baaf971a9a34d78ca
+    P2:
+      id: ARM_INSTRUCTION_P2_v1
+      artifact: prompts/P2.txt
+      bytes: 1181
+      digest: sha256:e313caeec0b19ef8632013292c8c45f92060a71091f21b355dc9e1729541df12
+
+request_contract:
+  conversation_turns: 1
+  tools_allowed: false
+  web_allowed: false
+  output_word_cap: 1600
+  task_package_byte_identical_across_arms: true
+  arm_specific_difference_only: arm_instruction
+
+integrity:
+  digest_algorithm: sha256
+  digest_computed_over: exact UTF-8 bytes of each component artifact
+  digest_verified_after_commit: false
+  treatment_integrity_audited: false
+  auditor: null
+  audited_at: null
+
+freeze:
+  frozen_at: null
+  frozen_by: null
+  manifest_digest: null
